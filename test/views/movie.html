@@ -1,0 +1,23 @@
+ <% include header.html %>
+<form class="form-horizontal well" method="GET">
+<select name="type" class="selectpicker show-tick" data-size="5" value="">
+<option></option>
+<option>科幻</option>
+<option>剧情</option>
+<option>犯罪</option>
+<option>西部</option>
+<option>爱情</option>
+</select>
+</form>
+
+<script type="text/javascript">
+$(function(){
+
+//下拉菜单
+$('.selectpicker').selectpicker({noneSelectedText:'请选择'});
+$('.selectpicker').selectpicker('val',$('.selectpicker').attr('value'));
+
+})
+</script>
+
+<% include footer.html %>

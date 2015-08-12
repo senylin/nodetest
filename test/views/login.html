@@ -1,0 +1,25 @@
+<% include header.html %>
+<div class="container-fluid">
+<form class="form-horizontal" method="post">
+<fieldset>
+<legend>User_Loading</legend>
+<%- message %>
+<div class="control-group">
+<label class="controls-label" for="username">User:</label>
+<div class="controls">
+<input type="text" class="input-xlarge" id="username" name="username">
+</div>
+</div>
+<div class="control-group">
+<label class="controls-label" for="password">Password:</label>
+<div class="controls">
+<input type="text" class="input-xlarge" id="password" name="password">
+</div>
+</div>
+<div class="form-actions">
+<button type="submit" class="btn btn-primary">Loding...</button>
+</div>
+</fieldset>
+</form>
+</div>
+<% include footer.html %>

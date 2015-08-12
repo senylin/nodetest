@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title><%=title%></title>
+<!--     // <script src="jquery-1.11.1.min.js"></script> -->
+<!--     <link href="bootstrap-3.3.2-dist/css/bootstrap.min.css"rel="stylesheet">
+    <link href="css/css.css"rel="stylesheet"> -->
+<!--     // <script src="bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
+    // <script src="js/news.js"></script>
+    // <script src="js/pubuliu.js"></script>
+    // <script src="js/store.js"></script> -->
+</head>
+<body bgcolor="white"  onscroll="followsc()" onload="pubu()" >
+<div class="main">
+<div class="header-all">
+
+</div>
+<div class="navige">
+<div class="lsy_nav">
+<ul>
+    <li style="margin-left: -40px;"><a>主页</a></li>
+    <li ><a>讨论</a></li>
+    <li class="act"><a href="#">新闻</a>
+    <ul class="news_down">
+        <li onclick="select('dailynews')">实事新闻</li>
+        <li onclick="select('techology')">科技研究</li>
+    </ul></li>
+    <li><a>分享</a></li>
+    <li><a>关于</a></li>
+    <li><a>Nov</a></li>
+</ul>
+</div>
+<div class="ico">
+<div class="icoa"><span class="glyphicon glyphicon-user"></span></div>
+<div class="icoa"><span class="glyphicon glyphicon-search"></span></div>
+</div>
+</div>
+ <div class="transmit">
+     <form role="form">
+         <div class="form-group">
+             <label for="ftitle" style="top:20px;">Title:</label>
+             <input type="text" class="form-control " id="ftitle" placeholder="Please put in your title">
+         </div>
+         <div class="form-group">
+             <label for="flab" style="top:60px;">Lab:</label>
+             <input type="text" class="form-control" id="flab" placeholder="<lab>&nbsp  <lab> &nbsp <lab>" >
+         </div>
+         <div class="form-group">
+             <label for="fresume" style="top:95px;">Resume:</label>
+             <textarea id="fresume">70字左右啊。。。。</textarea>
+</div>
+         <div class="checkbox">
+         <label class="ftype1"><input type="radio" name="ftype" >学术知识</label>
+         <label class="ftype2"><input type="radio" name="ftype">新闻资讯</label>
+     </div>
+         <div class="form-group">
+             <label for="finputfile" style="top:250px">上传图片</label>
+             <input type="file" id="finputfile" >
+             <label for="finputweb" style="top:300px">上传网页</label>
+             <input type="file" id="finputweb" >
+         </div>
+         <button  type="submit" class="btn btn-default fbutton" ><span class="glyphicon glyphicon-open"> </span></button>
+     </form>
+ </div>
+<div class="container-all">
+<div class="bread">
+    <ol class="breadcrumb bread_a">
+        <li><a style="color: #000000;font-size: 24px;font-family: Comic Sans MS;    ">Geeklub</a></li>
+        <li><a href="#">主页</a></li>
+        <li class="active">新闻版面</li>
+    </ol>
+
+</div>
+    <div class="changing"><span class="glyphicon glyphicon-th-large"></span></div>
+    <div class="changing2"><span class="glyphicon glyphicon-th-large"></span></div>
+    <div class="turnon" onclick="goon()"><span class="glyphicon glyphicon-open"></span></div>
+<div id="containerps">
+    <div class="pbcover"></div>
+    <div id="containerp">
+<div id ="wrap">
+
+</div>
+</div>
+
+</div>
+    <div class="turn_page" onclick="move_pageup()"  ></div>
+    <div class="turn_page2" onclick="move_pagedown()"></div>
+<div id="container">
+<div class="page nowpage" id="page_a" >
+        <ul class="pagination pagestyle" >
+            <li><a onclick="move_pageup()">&laquo;</a></li>
+            <li onclick="move_page(1)" class="active"><a>1</a></li>
+            <li onclick="move_page(2)"><a>2</a></li>
+            <li onclick="move_page(3)"><a>3</a></li>
+            <li onclick="move_page(4)"><a>4</a></li>
+            <li><a onclick="move_pagedown()">&raquo;</a></li>
+        </ul>
+</div>
+    <div class="page" id="page_b" style="display: none;left: 150px;">
+        <ul class="pagination pagestyle" >
+            <li><a onclick="move_pageup()">&laquo;</a></li>
+            <li onclick="move_page(1)"><a>1</a></li>
+            <li onclick="move_page(2)"  class="active"><a>2</a></li>
+            <li onclick="move_page(3)"><a>3</a></li>
+            <li onclick="move_page(4)"><a>4</a></li>
+            <li><a onclick="move_pagedown()">&raquo;</a></li>
+        </ul>
+    </div>
+    <div class="page" id="page_c" style="display: none;left: 150px;">
+        <ul class="pagination pagestyle" >
+            <li><a onclick="move_pageup()">&laquo;</a></li>
+            <li  onclick="move_page(2)"><a>2</a></li>
+            <li onclick="move_page(3)" class="active"><a>3</a></li>
+            <li onclick="move_page(4)"><a>4</a></li>
+            <li onclick="move_page(5)"><a>5</a></li>
+            <li><a onclick="move_pagedown()">&raquo;</a></li>
+        </ul>
+    </div>
+    <div class="page" id="page_d" style="display: none;left: 150px;">
+        <ul class="pagination pagestyle" >
+            <li><a onclick="move_pageup()">&laquo;</a></li>
+            <li  onclick="move_page(2)"><a>2</a></li>
+            <li onclick="move_page(3)"><a>3</a></li>
+            <li onclick="move_page(4)" class="active"><a>4</a></li>
+            <li onclick="move_page(5)"><a>5</a></li>
+            <li><a onclick="move_pagedown()">&raquo;</a></li>
+        </ul>
+    </div>
+    <div class="page" id="page_e" style="display: none;left: 150px;">
+        <ul class="pagination pagestyle" >
+            <li><a onclick="move_pageup()">&laquo;</a></li>
+            <li onclick="move_page(2)"><a>2</a></li>
+            <li onclick="move_page(3)"><a>3</a></li>
+            <li onclick="move_page(4)"><a>4</a></li>
+            <li onclick="move_page(5)" class="active"><a>5</a></li>
+            <li><a onclick="move_pagedown()">&raquo;</a></li>
+        </ul>
+    </div>
+
+
+</div>
+ <div id="container_pic">
+     <!--<div><span class="glyphicon glyphicon-user"></span></div>-->
+     <!--<div><span class="glyphicon glyphicon-search"></span></div>-->
+<div class="picall">
+     <p class="rendian">图片</p>
+    <!--<hr style="background-color: darkslategray; width:100%;height: 2px;position: relative;top: -15px;margin: 0 auto"/>-->
+    <div class="pic_left"></div>
+    <div class="pic_right"></div>
+    <div class="pic_top" onclick="pic_turnup()"></div>
+    <div class="pic_bottom" onclick="pic_turndown()"></div>
+    <div class="picnav">
+        <div id="picnavs">
+    </div></div>
+</div>
+     <div class="right_nav">
+         <p class="rendian">热点</p>
+         <ul class="right_nav_in" id="redian2">
+         </ul>
+     </div>
+ </div>
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+ <% include header.html %>
+<form class="form-horizontal well" method="GET">
+<select name="type" class="selectpicker show-tick" data-size="5" value="">
+<option></option>
+<option>科幻</option>
+<option>剧情</option>
+<option>犯罪</option>
+<option>西部</option>
+<option>爱情</option>
+</select>
+</form>
+
+<div class="span12">
+<div id="page1" pageCount="<%=page.pageCount%>" pageNum="<%=page.num %>" pageSize="<%=page.size%>" pageLimit="<%=page.limit%>" numberOfPages="<%=page.numberOf%>"></div>
+</div>
+
+<div class="span12">
+<table class="table table-hover table-striped">
+
+</table>
+</div>
+
+
+<script type="text/javascript">
+$(function(){
+
+//下拉菜单
+$('.selectpicker').selectpicker({noneSelectedText:'请选择'});
+$('.selectpicker').selectpicker('val',$('.selectpicker').attr('value'));
+
+//获得浏览器参数
+$.extend({
+	getUrlVars:function(){
+		var vars=[],hash;
+		var hashes = window.location.href.slice(window.location.href.indexOf('?')+1).split('&');
+		for(var i=0;i<hashes.length;i++){
+			hash = hashes[i].split('=');
+			vars.push(hash[0]);
+			vars[hash[0]]=hash[1];
+		}
+		return vars;
+	},
+	getUrlVar:function(name){
+		return $.getUrlVars()[name];
+	}
+});
+//封装浏览器参数
+var composeUrlParams=function(){
+	var param='';
+	$.each($.getUrlVars(),function(i,item){
+		if(item!='p'){
+			var val=$.getUrlVar(item);
+			if(val) param+="&"+ item +"=" + val;
+		}
+	});
+	return param;
+}
+//分页功能
+var page = $("#page1");
+
+var options = {
+currentPage:page.attr('pageNum'),
+totalPages:page.attr('pageCount'),
+numberOfPages:page.attr('numberOfPages'),
+pageUrl:function(type,page,current){
+	return "list?"+composeUrlParams()+"&p="+page;
+}
+}
+$('#page1').bootstrapPaginator(options);
+})
+
+
+</script>
+
+<% include footer.html %>
