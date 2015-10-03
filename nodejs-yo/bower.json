@@ -1,0 +1,16 @@
+{
+  "name": "nodejs-yo",
+  "version": "0.0.0",
+  "dependencies": {
+    "requirejs": "~2.1.4",
+    "bootstrap": "~3.3.1",
+    "modernizr": "~2.8.3",
+    "underscore": "~1.6.0",
+    "lesshat": "~3.0.2",
+    "jquery": "~1.11.2",
+    "almond": "~0.3.0"
+  },
+  "devDependencies": {
+
+  }
+}

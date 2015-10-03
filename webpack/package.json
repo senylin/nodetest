@@ -1,0 +1,25 @@
+{
+  "name": "nob",
+  "version": "1.0.0",
+  "description": "nob",
+  "main": "nob",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "nob"
+  },
+  "repository": {
+    "type": "git",
+    "url": "nob"
+  },
+  "keywords": [
+    "nob"
+  ],
+  "author": "nob",
+  "license": "ISC",
+  "devDependencies": {
+    "file-loader": "^0.8.4",
+    "url-loader": "^0.5.6"
+  }
+}

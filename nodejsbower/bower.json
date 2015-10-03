@@ -1,0 +1,16 @@
+{
+  "name": "nodebower",
+  "version": "0.0.0",
+  "authors": [
+    "bai"
+  ],
+  "description": "none",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
